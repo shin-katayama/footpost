@@ -6,9 +6,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+  <body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">FootPost</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/posts/new">足元を投稿する</a>
+        </div>
+      </div>
+    </header>
 
-</body>
+    <%= yield %>
+
+    <footer>
+      <p>
+        Copyright FootPost 2016.
+      </p>
+    </footer>
+  </body>
 </html>
+
+
+
+

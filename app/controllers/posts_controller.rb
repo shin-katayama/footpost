@@ -1,18 +1,18 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.order("id DESC")
   end
 
   def new
   end
 
   def create
-    Tweet.create(tweet_params)
+    Post.create(post_params)
   end
 
   private
-  def tweet_params
+  def post_params
     params.permit(:name, :image, :text)
   end
 
