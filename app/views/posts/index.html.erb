@@ -1,8 +1,13 @@
 <div class="contents row" >
   <% @posts.each do |post| %>
-    <p><%= post.name %></p>
-    <p><%= post.text %></p>
-    <p><%= post.user_id %></p>
-    <p><a href= "<%= post.image %>">画像に飛びます</a></p>
+   <div class="content_post" style="background-image: url(<%= post.image %>);">
+    <%= simple_format(post.text) %>
+      <span class="text"><%= post.text %></span>
+      <p><%= post.name %></p>
+      <p><%= post.user_id %></p>
+   </div>
   <% end %>
 </div>
+
+
+
