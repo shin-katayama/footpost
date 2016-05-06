@@ -2,8 +2,7 @@
   <% @posts.each do |post| %>
    <div class="content_post" style="background-image: url(<%= post.image %>);">
     <%= simple_format(post.text) %>
-      <span class="text"><%= post.text %></span>
-      <p><%= post.name %></p>
+      <span class="text"><%= post.name %></span>
       <p><%= post.user_id %></p>
    </div>
   <% end %>
