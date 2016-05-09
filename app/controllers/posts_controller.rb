@@ -13,6 +13,13 @@ class PostsController < ApplicationController
     Post.create(image: post_params[:image], text: post_params[:text], user_id: current_user.id)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    if post.user_id == current_user.id
+      post.destroy
+    end
+  end
+
   private
   def post_params
     params.permit(:image, :text)
