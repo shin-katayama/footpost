@@ -1,10 +1,13 @@
 <div class="contents row" >
   <% @posts.each do |post| %>
-   <div class="content_post" style="background-image: url(<%= post.image %>);">
-    <%= simple_format(post.text) %>
-      <span class="text"><%= post.name %></span>
-      <p><%= post.user_id %></p>
-   </div>
+    <div class="content_post" style="background-image: url(<%= post.image %>);">
+      <%= simple_format(post.text) %>
+      <span class="name">
+        <a href="">
+          <span>足元の投稿者</span><%= post.user.nickname %>
+        </a>
+      </span>
+    </div>
   <% end %>
 </div>
 
