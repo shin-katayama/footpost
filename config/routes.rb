@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'posts/new'  => 'posts#new'       #投稿画面
   post 'posts'      => 'posts#create'    #投稿機能
   delete  'posts/:id'  => 'posts#destroy'
+  patch   'posts/:id'  => 'posts#update'
+  get   'posts/:id/edit'  => 'posts#edit'
   get   'users/:id'   =>  'users#show'    #Mypageへのルーティング
 end
