@@ -53,4 +53,4 @@ group :production, :staging do
 end
 
 gem 'devise'
-  gem 'compass-rails','~> 2.0'
+gem 'compass-rails','~> 2.0'
