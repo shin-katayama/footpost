@@ -13,13 +13,17 @@
       </ul>
     </div>
     <% end %>
-    <%= simple_format(@post.text) %>
     <span class="name">
       <a href="/users/<%= @post.user.id %>">
         <span>足元の投稿者</span><%= @post.user.nickname %>
       </a>
     </span>
   </div>
+      <div class="content_text" >
+      <p>
+        <%= simple_format(@post.text) %>
+      </p>
+    </div>
   <div class="container"> 
     <!-- ここからフォーム -->
     <% if current_user %>
