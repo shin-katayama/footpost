@@ -1,30 +1,34 @@
 <div class ="contents row">
-  <div class="content_post" style="background-image: url(<%= @post.image %>);">
-    <% if user_signed_in? && current_user.id == @post.user_id %>
-      <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-      <ul class="more_list">
-        <li>
-          <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get %>
-        </li>
-        <li>
-          <%= link_to '削除', "/posts/#{@post.id}", method: :delete %>
-        </li>
-      </ul>
+  <div class="content_post">
+    <div class="content_image" style="background-image: url(<%= @post.image %>);">
     </div>
-    <% end %>
-    <span class="name">
-      <a href="/users/<%= @post.user.id %>">
-        <span>足元の投稿者</span><%= @post.user.nickname %>
-      </a>
-    </span>
-  </div>
-      <div class="content_text" >
+
+      <div class="k_content_content">
       <p>
         <%= simple_format(@post.text) %>
       </p>
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+          <ul class="more_list">
+            <ul>
+              <%= link_to '詳細', "/posts/#{@post.id}", method: :get %>
+            </ul>
+            <ul>
+              <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get %>
+            </ul>
+            <ul>
+              <%= link_to '削除', "/posts/#{@post.id}", method: :delete %>
+            </ul>
+          </ul>
+      <% end %>
+      <span class="name">
+        <a href="/users/<%= @post.user_id %>">
+          <span>name: </span><%= @post.user.nickname %>
+        </a>
+      </span>
+      </div>
     </div>
-  <div class="container"> 
+
+  <div class="container">
     <!-- ここからフォーム -->
     <% if current_user %>
       <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
@@ -32,7 +36,7 @@
         <input type="submit" value="SENT">
       <% end %>
     <% end %>
-    <div class="comments">   
+    <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>

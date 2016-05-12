@@ -1,7 +1,7 @@
 
 body, html {
   height: 100%;
-  background-color: white;
+  background-color: #EEEEEE;
 }
 
 h1, h2, h3, h4, h5, h6, p, body {
@@ -17,17 +17,155 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .content_post {
+  position: relative;
   float: left;
   height: 300px;
   width: 30%;
-  border-radius: 20px;
-  margin: 10px;
+  background-size: cover;
+  /*border-radius: 20px 0;*/
+  margin: 10px 10px 120px 10px;
 }
 
-.content_text {
-  height: 50px;
+.content_image {
+  height: 300px;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/*.content_text {
+  background-color: red;
+  height: 350px;
+  width: 30%;
+  border-color: gray;
+}*/
+
+
+/*
+.more{
+  background-color: yellow;
+  height: 300px;
+  width: 30%;
   border-color: gray;
 }
+*/
+
+.more_list{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+
+.k_content_content {
+  background-color: white;
+  height: 100px;
+  word-wrap: break-word; 
+  border-color: gray;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+footer{
+text-align: center;
+margin: 100px 10px 10px 10px;
+}
+
+
+
+/*ログイン画面*/
+body,p,form,input{margin: 0}　
+#form{
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #555;
+  }
+
+form p{
+    font-size: 14px;
+    }
+
+.form-title{
+  text-align: center;
+  }
+
+.field{
+  margin-bottom: 20px;
+  text-align: center;
+  }
+
+.check{
+text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  padding: 4px;
+  font-size: 14px;
+  }
+    
+.submit{
+  text-align: center;
+  }
+
+/* font */
+#form p{
+  color: #077685;
+  font-weight: bold;
+  }
+
+#form .form-title{
+  font-family: Arial;
+  font-size: 30px;
+  color: #4eb4c2;
+  }
+
+/* skin（ログイン画面） */
+#form{
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 10px #488a9e;
+  -moz-box-shadow: 0px 1px 10px #488a9e;
+  box-shadow: 0px 1px 10px #488a9e;
+  border: solid #4eb4c2 1px;
+  background: #fafafa;
+  }
+
+#form .form-title{
+  padding-bottom: 6px;
+  border-bottom: 2px solid #4eb4c2;
+  margin-bottom: 20px;
+  }
+
+.submit input{
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 6px #e3e3e3;
+  -moz-box-shadow: 0px 8px 6px #e3e3e3;
+  box-shadow: 0px 8px 6px #e3e3e3;
+  border: solid #f5fdff 4px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
+  background: -moz-linear-gradient(top, #61c7e0, #418da8);
+  }
+.submit input:hover{
+  background: #37a4bf;
+ }
+
+
+
+
 
 /*.all_contents{
  width: 1000px;
