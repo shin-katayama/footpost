@@ -1,6 +1,6 @@
 <div class ="contents row">
-  <div class="content_post">
-    <div class="content_image" style="background-image: url(<%= @post.image %>);">
+  <div class="content_post_solo">
+    <div class="content_image_solo" style="background-image: url(<%= @post.image %>);">
     </div>
 
       <div class="k_content_content">
@@ -9,9 +9,9 @@
       </p>
       <% if user_signed_in? && current_user.id == @post.user_id %>
           <ul class="more_list">
-            <ul>
+            <!--<ul>
               <%= link_to '詳細', "/posts/#{@post.id}", method: :get %>
-            </ul>
+            </ul><-->
             <ul>
               <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get %>
             </ul>
@@ -26,26 +26,33 @@
         </a>
       </span>
       </div>
-    </div>
 
-  <div class="container">
     <!-- ここからフォーム -->
-    <% if current_user %>
-      <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
-        <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
-        <input type="submit" value="SENT">
-      <% end %>
-    <% end %>
-    <div class="comments">
-      <h4>＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
-          </p>
+    <div class="k_comments">
+      <% if current_user %>
+        <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
+          <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+          <input type="submit" value="SENT">
         <% end %>
       <% end %>
+
+      <div class="comments">
+        <h4>コメント一覧</h4>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <p>
+              <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+              <%= comment.text %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+

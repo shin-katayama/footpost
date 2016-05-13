@@ -26,8 +26,23 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin: 10px 10px 120px 10px;
 }
 
+.content_post_solo {
+  position: relative;
+  float: left;
+  width: 60%;
+  background-size: cover;
+  /*border-radius: 20px 0;*/
+  margin: 0 20%;
+}
+
 .content_image {
   height: 300px;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.content_image_solo {
+  height: 600px;
   background-size: cover;
   border-radius: 20px 20px 0 0;
 }
@@ -49,6 +64,10 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 */
 
+
+
+
+
 .more_list{
   position: absolute;
   top: 10px;
@@ -59,11 +78,76 @@ h1, h2, h3, h4, h5, h6, p, body {
 .k_content_content {
   background-color: white;
   height: 100px;
-  word-wrap: break-word; 
+  word-wrap: break-word;
   border-color: gray;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
+.k_comments {
+  background-color: ;
+  word-wrap: break-word;
+  border-color: gray;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.k_comments h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success a {
+  margin: 0 37%;
+}
+
+.k_comments textarea{
+  width: 100%;
+  height: 100px;
+  @include boxBase(5px 0 15px,10px);
+  border: 1px solid $gray;
+  border-color: white;
+  border-radius: 20px;
+  font-family: "游ゴシック", "YuGothic";
+  margin: 5px 0 0 0;
+  padding: 8px 0.8em;
+}
+
+.k_comments input{
+  width: 100%;
+  @include boxBase(5px 0 15px,10px);
+  border: 1px solid $gray;
+  border-radius: 20px;
+  font-family: "游ゴシック", "YuGothic";
+  margin: 0 0 5px 0;
+  padding: 8px 0.8em;
+}
+
+.contents h4 {
+  padding: 8px;
+}
+
+.contents strong {
+  font-size: 12px;
+  padding: 8px;
+}
+
+
+
+/*
+  .k_comments input[type="submit"] {
+    @extend .transition;
+    background-color: $accent;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    &:hover {
+      background-color: lighten($accent, 10%);
+    }
+*/
+
 
 
 footer{
