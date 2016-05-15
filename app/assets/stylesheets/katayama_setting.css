@@ -12,8 +12,150 @@ h1, h2, h3, h4, h5, h6, p, body {
   padding: 0;
 }
 
+
+
+
+
+
+
+
+/*****グローバルメニュー****/
+#menu{
+    width: 100%;
+    margin: 10px auto;
+    background: #444;/*７*/
+}
+#menu-inner{
+    width: 1000px;/*１*/
+    height: 40px;/*２*/
+    margin: 0 auto;
+    background: #444;/*８*/
+}
+#menu-btn{
+  display: none;
+}
+
+#menu-content{
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+#menu-content > li{
+    position: relative;
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+#menu-content > li > a{
+    position: relative;
+    display: block;
+    height: 100%;
+    padding-left: 15px;/*３*/
+    padding-right: 15px;/*３*/
+    line-height: 40px;/*２*/
+    background: #444;/*９*/
+    color: #fff;/*10*/
+    font-size: 90%;
+    text-decoration: none;
+    z-index: 2;
+}
+#menu-content > li > a:hover{
+    background: #555;/*11*/
+    color: #fff;/*12*/
+}
+#menu-content > li > a > .blogicon-chevron-down{margin-right: 5px;}
+/*２階層目*/
+#menu-content > li > ul.second-content{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    z-index: -1;
+}
+#menu-content > li:hover > ul.second-content{
+    visibility: visible;
+    top: 40px;/*2*/
+    z-index: 1;
+    transition: all .3s;
+}
+#menu-content > li > ul.second-content > li{
+    text-align: center;
+    width: 200px;/*４*/
+    height: 40px;/*５*/
+}
+#menu-content > li > ul.second-content > li > a{
+    display: block;
+    line-height: 40px;/*５*/
+    background: #444;/*13*/
+    color: #fff;/*14*/
+    font-size: 70%;
+    text-decoration: none;
+}
+#menu-content > li > ul.second-content > li > a:hover{
+    background: #555;/*15*/
+    color: #fff;/*16*/
+}
+/*******トグルメニュ*********/
+@media screen and (max-width:960px){/*19*/
+#menu-inner{
+    width: 100%;
+    height: auto;
+}
+#btn-content{text-align: right;}/*20*/
+#menu-btn{
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background: #555;/*17*/
+    color: #fff;/*18*/
+    font-size: 70%;
+}
+#menu-content{
+    display: none;
+    width: 100%;
+}
+#menu-content > li{
+    width: 100%;
+    height: 40px;/*６*/
+    float: none;
+}
+#menu-content > li > a{
+    width: 100%;
+    line-height: 40px;/*６*/
+    padding: 0;
+    text-decoration: none;
+}
+/*２階層目*/
+#menu-content > li:hover > ul.second-content{display: none;}
+#menu-content > li > a > .blogicon-chevron-down{display: none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.user__info {
+  float: left;
+  width: 30%;
+}
+
 .post {
-  margin: 0 200px;
+  color: red;
+  text-align: center;
 }
 
 .content_post {
@@ -152,7 +294,13 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 footer{
 text-align: center;
-margin: 100px 10px 10px 10px;
+color: red;
+margin: 100px 0 0 0;
+background-color: #444;
+}
+
+footer p{
+  color: white;
 }
 
 
@@ -192,18 +340,19 @@ input[type="password"] {
     
 .submit{
   text-align: center;
+  padding: 10px;
   }
 
 /* font */
 #form p{
-  color: #077685;
+  color: #444;
   font-weight: bold;
   }
 
 #form .form-title{
   font-family: Arial;
   font-size: 30px;
-  color: #4eb4c2;
+  color: #444;
   }
 
 /* skin（ログイン画面） */
@@ -211,16 +360,16 @@ input[type="password"] {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: 0px 1px 10px #488a9e;
-  -moz-box-shadow: 0px 1px 10px #488a9e;
-  box-shadow: 0px 1px 10px #488a9e;
-  border: solid #4eb4c2 1px;
+  -webkit-box-shadow: 0px 1px 10px #444;
+  -moz-box-shadow: 0px 1px 10px #444;
+  box-shadow: 0px 1px 10px #444;
+  border: solid #444 1px;
   background: #fafafa;
   }
 
 #form .form-title{
   padding-bottom: 6px;
-  border-bottom: 2px solid #4eb4c2;
+  border-bottom: 2px solid #444;
   margin-bottom: 20px;
   }
 
@@ -240,8 +389,8 @@ input[type="password"] {
   -moz-box-shadow: 0px 8px 6px #e3e3e3;
   box-shadow: 0px 8px 6px #e3e3e3;
   border: solid #f5fdff 4px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
-  background: -moz-linear-gradient(top, #61c7e0, #418da8);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#444), to(#444));
+  background: -moz-linear-gradient(top, #444, #444);
   }
 .submit input:hover{
   background: #37a4bf;

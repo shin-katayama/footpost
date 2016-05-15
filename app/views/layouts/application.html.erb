@@ -33,6 +33,7 @@
 
   <body>
 
+
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -70,10 +71,52 @@
           </div>
           <button type="submit" class="btn btn-default">足元を探す</button>
         </form>
+
+
         <ul class="nav navbar-nav navbar-right">
           <!--<li><a href="#">Link</a></li>-->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <%= current_user.nickname %> <span class="caret"></span></a>
+            <% if user_signed_in? %>
+              <!--<div class="user_nav grid-6">
+                  <ul class="user__info">
+                    <li>
+                      <a href="/users/<%= current_user.id %>">マイページ</a>
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                    </li>
+                  </ul>
+
+                <a class="post" href="/posts/new">足元を投稿する</a>
+              </div>-->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <%= current_user.nickname %><span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="/users/<%= current_user.id %>">足元を投稿する</a></li>
+              <li><a href="#">マイページ</a></li>
+              <li><a href="#">ログアウト</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+
+            <% else %>
+              <!--<div class="grid-6">
+                <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+                <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+              </div><-->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> DropDown<span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="#">ログイン</a></li>
+              <li><a href="#">新規登録</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+
+            <% end %>
+
+
+
+
             <ul class="dropdown-menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
@@ -88,24 +131,82 @@
   </nav>
 
 
+
+
+
+  <div id="menu">
+  <div id="menu-inner">
+      <div id="btn-content">
+          <span id="menu-btn"><i class="blogicon-reorder"></i> MENU</span>
+      </div>
+      <ul id="menu-content">
+        <% if user_signed_in? %>
+          <li>
+              <a href="１階層目のリンク"> <%= current_user.nickname %><i class="blogicon-chevron-down"></i></a>
+              <ul class="second-content">
+                  <li><a class="post" href="/posts/new">足元を投稿する</a></li>
+                  <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+                  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>ログアウト</a></li>
+              </ul>
+          </li>
+        <% else %>
+          <li>
+              <a href="１階層目のリンク"> はじめての人<i class="blogicon-chevron-down"></i></a>
+              <ul class="second-content">
+                  <li><%= link_to "ログイン", new_user_session_path, class: 'post' %>ログイン</a></li>
+                  <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %>新規登録</a></li>
+              </ul>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+  </div>
+  <div style="clear:both"></div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>
+  $(function(){
+      var menuBtn = $("#menu-btn"),
+          menuContent = $("#menu-content");
+      menuBtn.click(function(){
+          menuContent.slideToggle();
+      });
+      $(window).resize(function(){
+          var win = $(window).width(),
+              p = 960;//19
+          if(win > p){
+              menuContent.show();
+          }else{
+              menuContent.hide();
+          }
+      });
+  });
+  </script>
+
+
+
+
+
+
    <div class="container">
-   <header class="header">
+    <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">FootPostZ</a></h1>
+        <h1 class="grid-6"><!--<a href="/">FootPostZ</a></h1>-->
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= current_user.nickname %>
+            <span><!--<%= current_user.nickname %>-->
               <ul class="user__info">
-                <li>
+                <ui>
+                  <a class="post" href="/posts/new">足元を投稿する</a>
                   <a href="/users/<%= current_user.id %>">マイページ</a>
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                </li>
+                </ui>
               </ul>
             </span>
             <!--<div class="btn-group" role="group" aria-label="...">
               <button type="button" class="btn btn-default">post</button>
             </div>-->
-            <a class="post" href="/posts/new">足元を投稿する</a>
+            <!--<a class="post" href="/posts/new">足元を投稿する</a>-->
           </div>
         <% else %>
           <div class="grid-6">
@@ -117,17 +218,17 @@
     </header>
     </div>
 
+
+
     <div class="container">
     <%= yield %>
     </div>
 
-    <div class="container">
     <footer>
       <p>
         Copyright FootPost 2016.
       </p>
     </footer>
-    </div>
   </body>
 </html>
 
