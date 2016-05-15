@@ -168,6 +168,17 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin: 10px 10px 120px 10px;
 }
 
+.name{
+  font-size: 16px;
+  padding: 8px;
+}
+
+.k_content_content p{
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+
 .content_post_solo {
   position: relative;
   float: left;
@@ -181,12 +192,14 @@ h1, h2, h3, h4, h5, h6, p, body {
   height: 300px;
   background-size: cover;
   border-radius: 20px 20px 0 0;
+  box-shadow: 0px 1px 10px #444;
 }
 
 .content_image_solo {
   height: 600px;
   background-size: cover;
   border-radius: 20px 20px 0 0;
+  box-shadow: 0px 1px 10px #444;
 }
 
 /*.content_text {
@@ -214,7 +227,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   position: absolute;
   top: 10px;
   right: 10px;
-
+  font-size: 16px;
 }
 
 .k_content_content {
@@ -224,6 +237,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   border-color: gray;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  box-shadow: 0px 1px 10px #444;
 }
 
 .k_comments {
@@ -254,6 +268,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   font-family: "游ゴシック", "YuGothic";
   margin: 5px 0 0 0;
   padding: 8px 0.8em;
+  box-shadow: 0px 1px 10px #444;
 }
 
 .k_comments input{

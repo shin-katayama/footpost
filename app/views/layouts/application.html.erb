@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FootPostZ</title>
+    <title>FootPost</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -33,6 +33,7 @@
 
   <body>
 
+  <header class="header">
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -44,7 +45,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">FootPostZ</a>
+        <a class="navbar-brand" href="/">FootPost</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -134,6 +135,7 @@
 
 
 
+
   <div id="menu">
   <div id="menu-inner">
       <div id="btn-content">
@@ -186,37 +188,6 @@
 
 
 
-
-
-   <div class="container">
-    <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><!--<a href="/">FootPostZ</a></h1>-->
-        <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <span><!--<%= current_user.nickname %>-->
-              <ul class="user__info">
-                <ui>
-                  <a class="post" href="/posts/new">足元を投稿する</a>
-                  <a href="/users/<%= current_user.id %>">マイページ</a>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                </ui>
-              </ul>
-            </span>
-            <!--<div class="btn-group" role="group" aria-label="...">
-              <button type="button" class="btn btn-default">post</button>
-            </div>-->
-            <!--<a class="post" href="/posts/new">足元を投稿する</a>-->
-          </div>
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-            <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-          </div>
-        <% end %>
-      </div>
-    </header>
-    </div>
 
 
 

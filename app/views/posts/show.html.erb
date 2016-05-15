@@ -4,27 +4,27 @@
     </div>
 
       <div class="k_content_content">
-      <p>
-        <%= simple_format(@post.text) %>
-      </p>
-      <% if user_signed_in? && current_user.id == @post.user_id %>
-          <ul class="more_list">
-            <!--<ul>
-              <%= link_to '詳細', "/posts/#{@post.id}", method: :get %>
-            </ul><-->
-            <ul>
-              <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get %>
+        <% if user_signed_in? && current_user.id == @post.user_id %>
+            <ul class="more_list">
+              <!--<ul>
+                <%= link_to '詳細', "/posts/#{@post.id}", method: :get %>
+              </ul><-->
+              <ul>
+                <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get %>
+              </ul>
+              <ul>
+                <%= link_to '削除', "/posts/#{@post.id}", method: :delete %>
+              </ul>
             </ul>
-            <ul>
-              <%= link_to '削除', "/posts/#{@post.id}", method: :delete %>
-            </ul>
-          </ul>
-      <% end %>
-      <span class="name">
-        <a href="/users/<%= @post.user_id %>">
-          <span>name: </span><%= @post.user.nickname %>
-        </a>
-      </span>
+        <% end %>
+        <span class="name">
+          <a href="/users/<%= @post.user_id %>">
+            <span>name: </span><%= @post.user.nickname %>
+          </a>
+          <p>
+            <%= simple_format(@post.text) %>
+          </p>
+        </span>
       </div>
 
     <!-- ここからフォーム -->
