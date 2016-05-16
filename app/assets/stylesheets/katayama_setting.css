@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 /*****グローバルメニュー****/
 #menu{
     width: 100%;
-    margin: 10px auto;
+    margin: 1px auto;
     background: #444;/*７*/
 }
 #menu-inner{
@@ -140,7 +140,11 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 
 
-
+.container {
+  margin:  50px auto 0 auto !important;
+  background-color: #EEEEEE !important;
+  box-shadow: 0 0 0 0 !important;
+}
 
 
 
@@ -199,7 +203,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   height: 600px;
   background-size: cover;
   border-radius: 20px 20px 0 0;
-  box-shadow: 0px 1px 10px #444;
+
 }
 
 /*.content_text {
@@ -255,7 +259,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .success a {
-  margin: 0 37%;
+  margin: ;
 }
 
 .k_comments textarea{
@@ -277,7 +281,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   border: 1px solid $gray;
   border-radius: 20px;
   font-family: "游ゴシック", "YuGothic";
-  margin: 0 0 5px 0;
+  margin: 10px 0 5px 0;
   padding: 8px 0.8em;
 }
 
@@ -310,7 +314,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 footer{
 text-align: center;
 color: red;
-margin: 100px 0 0 0;
+margin: 0 0 0 0;
 background-color: #444;
 }
 
