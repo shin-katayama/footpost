@@ -92,7 +92,7 @@
 
             <ul class="dropdown-menu">
               <li><a href="/users/<%= current_user.id %>">足元を投稿する</a></li>
-              <li><a href="#">マイページ</a></li>
+              <li><a href="#">マイポスト</a></li>
               <li><a href="#">ログアウト</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">Separated link</a></li>
@@ -108,7 +108,6 @@
             <ul class="dropdown-menu">
               <li><a href="#">ログイン</a></li>
               <li><a href="#">新規登録</a></li>
-              <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">Separated link</a></li>
             </ul>
@@ -146,9 +145,12 @@
           <li>
               <a href="１階層目のリンク"> <%= current_user.nickname %><i class="blogicon-chevron-down"></i></a>
               <ul class="second-content">
+                  <li><a class="post" href="/">ホーム</a></li>
                   <li><a class="post" href="/posts/new">足元を投稿する</a></li>
-                  <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+                  <li><a href="/users/<%= current_user.id %>">マイポスト</a></li>
+                  <li><a href="/">登録情報管理</a></li>
                   <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>ログアウト</a></li>
+                  <li><a href="/">instagramを覗く</a></li>
               </ul>
           </li>
         <% else %>

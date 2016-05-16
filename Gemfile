@@ -54,3 +54,4 @@ end
 
 gem 'devise'
 gem 'compass-rails','~> 2.0'
+gem 'instagram'
