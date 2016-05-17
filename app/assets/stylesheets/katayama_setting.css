@@ -141,13 +141,15 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 
 .container {
-  margin:  50px auto 0 auto !important;
+  margin:  0 auto 0 auto !important;
   background-color: #EEEEEE !important;
   box-shadow: 0 0 0 0 !important;
 }
 
 
-
+.contents row{
+  margin: 0 200 0 0;
+}
 
 
 
@@ -189,7 +191,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   width: 60%;
   background-size: cover;
   /*border-radius: 20px 0;*/
-  margin: 0 20%;
+  margin: 20px 100px 20% 20%;
 }
 
 .content_image {
@@ -255,11 +257,13 @@ h1, h2, h3, h4, h5, h6, p, body {
 .k_comments h3 {
   font-weight: bold;
   margin-bottom: 20px;
+  margin: 0 50px;
   text-align: center;
 }
 
 .success a {
-  margin: ;
+  margin: 0 230px;
+  text-align: center;
 }
 
 .k_comments textarea{
