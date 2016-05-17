@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mapuser.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mapuser.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @mapuser.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @mapuser.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @mapuser.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_mapuser_path(@mapuser) %> |
+<%= link_to 'Back', mapusers_path %>
