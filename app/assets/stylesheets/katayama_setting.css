@@ -209,6 +209,17 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 }
 
+.profile_image {
+  width: 60%;
+  margin: 20px 0 10px 10px;
+  box-shadow: 0px 1px 10px #444;
+}
+
+.mypage_title {
+  font-weight: bold;
+  margin: 40px 0 0 0;
+}
+
 /*.content_text {
   background-color: red;
   height: 350px;
@@ -263,7 +274,7 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .success a {
-  margin: 0 230px;
+  margin: 0 270px;
   text-align: center;
 }
 
@@ -367,6 +378,11 @@ input[type="password"] {
   padding: 10px;
   }
 
+.interest_foot{
+  font-weight: bold;
+  text-align: center;
+}
+
 /* font */
 #form p{
   color: #444;
@@ -398,6 +414,8 @@ input[type="password"] {
   margin-bottom: 20px;
   }
 
+
+
 .submit input{
   font-family: Arial;
   color: #ffffff;
@@ -423,6 +441,20 @@ input[type="password"] {
 
 
 
+
+
+.donations_title{
+  font-weight: bold;
+  margin: 10px 30px 0 0;
+}
+
+.donations_contents{
+  margin: 10px 0 0 0;
+}
+
+.donations_btn{
+  margin: 20px 0 20px 0;
+}
 
 
 /*.all_contents{

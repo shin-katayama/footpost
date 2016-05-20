@@ -11,6 +11,12 @@
               <ul>
                 <%= link_to '詳細', "/posts/#{post.id}", method: :get %>
               </ul>
+              <ul>
+                <%= link_to 'フォロー'%>
+              </ul>
+              <ul>
+                <%= link_to 'どうも！'%>
+              </ul>
                 <% if user_signed_in? && current_user.id == post.user_id %>
                   <ul>
                     <%= link_to '編集', "/posts/#{post.id}/edit", method: :get %>

@@ -80,10 +80,10 @@
               <ul class="second-content">
                   <li><a class="post" href="/">ホーム</a></li>
                   <li><a class="post" href="/posts/new">足元を投稿する</a></li>
-                  <li><a href="/users/<%= current_user.id %>">マイポスト</a></li>
-                  <li><a>登録情報管理</a></li>
+                  <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
                   <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>ログアウト</a></li>
-                  <li><a href="/">instagramを覗く</a></li>
+                  <li><a href="https://www.instagram.com/">instagramを覗く</a></li>
+                  <li><a href="/donations">footpostに寄付する</a></li>
               </ul>
           </li>
         <% else %>
@@ -134,8 +134,6 @@
       <p>
         Copyright FootPost 2016.
       </p>
-
-
     </footer>
   </body>
 </html>

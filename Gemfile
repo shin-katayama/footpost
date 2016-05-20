@@ -57,3 +57,4 @@ gem 'compass-rails','~> 2.0'
 gem 'instagram'
 gem "gmaps4rails"
 gem "geocoder"
+gem 'webpay'

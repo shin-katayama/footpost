@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show]
   resources :instagrams
+  get 'donations' => 'donations#index'
+  get 'donations/interest' => 'donations#interest'
 end
